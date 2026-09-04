@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "High Level Design/Nearby Friends.md",
+                "file": "Key Technologies/Networking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Nearby Friends"
+              "title": "Networking"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -169,33 +171,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c784686e4b681322",
+  "active": "a7fc1fad4379572b",
   "lastOpenFiles": [
-    "Key Technologies/Microservices.md",
-    "High Level Design/Nearby Friends.md",
-    "To Study.md",
+    "Key Technologies/CDC.md",
+    "Key Technologies/Networking.md",
     "Learn.md",
+    "To Study.md",
+    "High Level Design/Live Streaming.md",
+    "Key Technologies/Geo.md",
+    "Key Technologies/Elasticsearch.md",
+    "Key Technologies/Amazon's Dynamo.md",
+    "Key Technologies/Back Of The envelope Estimates.md",
+    "High Level Design/Nearby Friends.md",
+    "Key Technologies/Microservices.md",
     "Lambda.md",
     "Interviews.md",
-    "High Level Design/Live Streaming.md",
     "Key Technologies/DynamoDB.md",
     "Key Technologies/Redis.md",
-    "Key Technologies/Back Of The envelope Estimates.md",
     "Key Technologies/Cassandra.md",
     "Key Technologies/Authentication  & Authorization.md",
     "Key Technologies/Stream Processing.md",
-    "Key Technologies/CDC.md",
     "Key Technologies/PostgreSQL.md",
-    "Key Technologies/Amazon's Dynamo.md",
     "Key Technologies/Object Store.md",
-    "Key Technologies/Elasticsearch.md",
     "Key Technologies/Mongo.md",
     "Key Technologies/Database Tech Comparison.md",
     "High Level Design/Payment System.md",
     "img/livestreaming/live_streaming.png",
     "Key Technologies/Kafka.md",
     "q53o9ttjkm5j6459-e3piruhnmhf;tl'fpv bkii0hkng'd.md",
-    "Key Technologies/Geo.md",
     "img/amazon_dynamodb/dynamodb-partition-key-1.gif",
     "img/amazon_dynamodb/p1.png",
     "img/livestreaming/live_stream_workflow.png",
@@ -209,7 +212,6 @@
     "img/amazon_dynamodb/p2.png",
     "img/amazon_dynamodb",
     "Dynamo.md",
-    "Dynamo 1.md",
     "img/elasticsearch",
     "Key Technologies/Elasticsearch",
     "img/cassandra",
