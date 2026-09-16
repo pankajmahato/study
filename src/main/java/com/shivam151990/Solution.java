@@ -1,21 +1,45 @@
 package com.shivam151990;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
 
-public class Solution {
+class Solution {
+    public int spanningTree(int V, int[][] edges) {
+        boolean[] vis = new boolean[V];
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        pq.offer(new int[]{0, 0});
+        List<List<int[]>> adjList = new ArrayList<>();
+        for (int i = 0; i < V; i++) {
+            adjList.add(new ArrayList<>());
+        }
 
-    public static void main(String[] args) {
-        LocalDateTime t1 = LocalDateTime.of(2025, 8, 22, 10, 0);
-        LocalDateTime t2 = LocalDateTime.now();
+        for (int[] ed : edges) {
+            int u = ed[0];
+            int v = ed[1];
+            int wt = ed[2];
+            adjList.get(u).add(new int[]{v, wt});
+            adjList.get(v).add(new int[]{u, wt});
+        }
+        int tot = 0;
+        while (!pq.isEmpty()) {
+            int curNode = pq.peek()[0];
+            int curWt = pq.peek()[1];
+            pq.poll();
 
-        // 1st way
-        long between = ChronoUnit.MINUTES.between(t1, t2);
-        System.out.println("ChronUnit Minutes: " + between);
+            vis[curNode] = true;
+            tot += curWt;
 
-        // 2nd way
-        Duration between1 = Duration.between(t1, t2);
-        System.out.println("Duration Minutes: " + between1.getSeconds() / 60);
+            for (int[] adj : adjList.get(curNode)) {
+                int adjNode = adj[0];
+                int adjWt = adj[1];
+
+                if (!vis[adjNode]) {
+                    pq.offer(new int[]{adjNode, adjWt});
+                }
+            }
+        }
+        return tot;
     }
 }
